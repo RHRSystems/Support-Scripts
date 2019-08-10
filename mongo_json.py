@@ -58,5 +58,5 @@ def connMon(url ,db):
         return err_front.split('.') [2] + "-" + err_back
 
 
-if __name__ == __main__:
+if __name__ == '__main__':
     getDb()
