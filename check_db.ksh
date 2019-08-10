@@ -22,10 +22,10 @@ else
    exit
 fi
 
-server=$1		                    ; export server
+server=$1		                 ; export server
 today=`date +%Y%m%d%H%M%S`      ; export today
 username=sa	                    ; export username
-master=master		                ; export master
+master=master		              ; export master
 sybsystemprocs=sybsystemprocs   ; export sybsystemprocs
 local_dump_dir=/tmp             ; export local_dump_dir
 top_dir=/export/home2/sybase/bin                  ; export top_dir
