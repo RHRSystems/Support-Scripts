@@ -1,4 +1,4 @@
-# Python script to read a json file containing databases and connect to each one.
+# Python script to read a json file containing MongoDB databases and connect to each one.
 # Return "PASS" if successful, otherwise return the specific error in sys.exc_info()
 
 import sys, os, simplej son, pymongo
