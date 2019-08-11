@@ -32,11 +32,11 @@ def getData(Sql):
     row = cursor.fetchone()
 
     while row:
-        if (Ien(str([row]))1 ] O:
-            a = fe.SUb(trrr*trfOw[1])
+        if (len(str([row]))) > O:
+            a = re.sub(' ','*',row[1])
             print ("Database- ", row[0], " Account- ", a)
-            row = cursor.fetchone()
-            print()
+        row = cursor.fetchone()
+        print()
 
 if __name__ == '__main__':
 
