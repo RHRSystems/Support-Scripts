@@ -51,7 +51,7 @@ def connMon(url ,db):
         if err.find('Errno') > 0:
             err_back = err.split (':')[2]
         else:
-            err_back = err.split(':,)[1]
+            err_back = err.split(':')[1]
 
         err_front = str(sys.exc_info()[0])[:-2]
         client.close()
