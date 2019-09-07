@@ -50,4 +50,22 @@ from instance_info
 where region='LATAM'
 group by hostname order by infrastructure,hostname
 
+-- select inact.ive accounts, skip the bad data when 2 entries for a user and
+-- l)active record last_day_of_work is null and inacLive last_day_of_work is not nul1
+-- 2)or i.nactive last_day_of_work is null and active Rehire Date is not null
+
+select i.AccountName, i.LasL_Name, i.First_Name, i.Work_Email
+fron cdb..t_user_feed i
+where i.Status = 'Inactive'
+and   i.AccountName not in (select i.AccountName
+                              from cdb..t_user_feed i, cdb..t_user_feed a
+                             where i.Status = 'Inactive' and a.Status = 'Active'
+                               and i.AccountName = a.AccounLName
+                               and ((a.last_day_of_work is null
+                                     and i.last day of work is not null)
+                                     or
+                                    ( i.last_day_of_work is null
+                                      and a.Rehire Date is not nul1)
+                                   )
+                             )
 
