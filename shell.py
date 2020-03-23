@@ -3,7 +3,7 @@
 import sys,os
 
 with open ('temp.txt') as readfile:
-    records = readf il-e. read]ines o
+    records = readfile.readlines()
     for r in records:
         e = r.split (',')[1]
         h = r.split (',')[3]
