@@ -7,8 +7,8 @@ import sys
 from qpython import qconnection
 
 # Globals
-AllApps = [['Appl','applhostl001','app1host1002',91111,['App1','app1hostl001','app1host1002',7777],
-           ['Pub1','pub1host01','publhost02',8000],['Pub1','publhost01','publhost02',8003]]
+AllApps = [['Appl','applhostl001','app1host1002',91111,['App2','app2hostl001','app2host1002',7777],
+           ['Pub3','pub3host01','pub3host02',8000],['Pub4','publ4host01','publ4host02',8003]]
 
 count_dict = {}
 
