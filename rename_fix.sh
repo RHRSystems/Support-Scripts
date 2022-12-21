@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# This script renames an Fix adapter
-# r. Renames direccory
+# This script renames an endpoint adapter
+# 1. Renames direccory
 # 2. Renames applicable files
 # 3. Renames in cron
 
@@ -19,10 +19,11 @@ host=`hostname`
 user=`whoami`
 suphost="supp00l" #Support host
 fix_hdir="/apps/fix" #FIX sym link directory
+
 # Rename directories to new Adapter
 fix_hdir=`ssh -nqx $suphost "ls -ltrd $fix_hdir/S{fix}" | awk -F'->' '{print $2}' | sed -e 's/^[]*//' -e 's/[ ]*$//'`
 echo "Adapter home directory: $fix_hdir"
-srchost=`echo gfix_hdir } awk -F'/' '{print $3}'`
+srchost=`echo gfix_hdir | awk -F'/' '{print $3}'`
 localdir="~`echo $fix_hdir | awk -F"$srchost" '{print $2}'`"
 
 echo "`date`: Rename relevant files on $tarhost"
@@ -63,6 +64,6 @@ echo "`date`: Modified link on $suphost for $newfix"
 echo "Removing $fix from register"
 ssh -nqx $suphost "
 	cd ~/apps/bin
-	./register_remove_fix_prod.sh -ni $fix
+	./register_prod.sh -ni $fix
 "
 echo "`date`: Removed $fix from register"
