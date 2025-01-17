@@ -9,7 +9,7 @@ if (Select-String -Pattern "dev" -InputObject $hosthome) {
     $Env = "DEV"
 } elseif (Select-String -Pattern "qa" -InputObject $hosthome) {
     $Hosts = "us1qa1", "us1qa2", "us1qa3"
-    $Env = "DEV"
+    $Env = "QA"
 } else {  #we know the rest are the PROD boxes
     $Hosts = "us1", "us2", "us3"
     $Env = "PROD"
